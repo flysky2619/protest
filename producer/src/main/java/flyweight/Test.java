@@ -56,6 +56,7 @@ public class Test {
 
     private static class Producer extends Thread
     {
+        @Override
         public void run()
         {
             for (int i = 0; i < 5; i++)
@@ -68,6 +69,7 @@ public class Test {
 
     private static class Consumer extends Thread
     {
+        @Override
         public void run()
         {
             for (int i = 0; i < 5; i++)

@@ -15,6 +15,8 @@ public class Test {
         ConcreteDecoratorB concreteDecoratorB = new ConcreteDecoratorB();
 
         concreteDecoratorA.setComponent(concreteComponent);
+        concreteDecoratorA.operation();
+        System.out.println("-----------------------");
         concreteDecoratorB.setComponent(concreteDecoratorA);
         concreteDecoratorB.operation();
     }
