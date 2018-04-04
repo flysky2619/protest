@@ -10,11 +10,11 @@ import java.util.Map;
  */
 public class TeacherFactory {
 
-    private Map<Integer, Teacher> integerTeacherMapPool;
+    private static Map<Integer, Teacher> integerTeacherMapPool;
 
 
     private TeacherFactory() {
-        this.integerTeacherMapPool = new HashMap<>();
+        integerTeacherMapPool = new HashMap<>();
     }
 
     public static TeacherFactory getInstance() {
@@ -22,7 +22,7 @@ public class TeacherFactory {
     }
 
 
-    public Teacher getTeacher(int num) {
+    public static Teacher getTeacher(int num) {
         Teacher teacher = integerTeacherMapPool.get(num);
 
         if (teacher == null) {
